@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,1955 +7,1535 @@
 <title>Imidar Bio | إيميدار بيو</title>
 
 <style>
-
-:root {
-    --cream: #F5EFE1;
-    --olive: #7E9373;
-    --brown: #4F4136;
-    --honey: #FFCB6B;
-    --terra: #D4A87C;
-    --white: #FFFFFF;
+:root{
+  --cream:#F5EFE1;
+  --olive:#7E9373;
+  --brown:#4F4136;
+  --honey:#FFCB6B;
+  --terra:#D4A87C;
+  --white:#fffdf8;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+  font-family:Arial, sans-serif;
+  background:var(--cream);
+  color:var(--brown);
+  line-height:1.7;
 }
 
-body {
-    font-family: Arial, Tahoma, sans-serif;
-    background: var(--cream);
-    color: var(--brown);
-    line-height: 1.8;
+html{
+  scroll-behavior:smooth;
 }
 
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
 
 /* ================= HEADER ================= */
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(245,239,225,0.97);
-
-    border-bottom: 1px solid rgba(79,65,54,0.12);
-
-    box-shadow: 0 3px 15px rgba(79,65,54,0.08);
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(245,239,225,.96);
+  border-bottom:1px solid rgba(79,65,54,.12);
+  backdrop-filter:blur(10px);
 }
 
-.header-container {
-    max-width: 1250px;
-    margin: auto;
-
-    padding: 12px 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
+.navbar{
+  max-width:1250px;
+  margin:auto;
+  min-height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  padding:12px 25px;
 }
 
-.logo {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:bold;
+  font-size:22px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
+.logo img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:50%;
 }
 
-nav a {
-    color: var(--brown);
-    text-decoration: none;
-    font-weight: bold;
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  font-weight:bold;
 }
 
-nav a:hover {
-    color: var(--olive);
+.nav-links a{
+  transition:.25s;
 }
 
-.cart-button {
-    border: none;
-    background: var(--honey);
-    color: var(--brown);
-
-    padding: 11px 18px;
-    border-radius: 30px;
-
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
+.nav-links a:hover{
+  color:var(--olive);
 }
 
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.cart-btn,
+.lang-btn{
+  border:1px solid rgba(79,65,54,.2);
+  background:var(--white);
+  color:var(--brown);
+  padding:10px 15px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.cart-btn:hover{
+  background:var(--honey);
+}
 
 /* ================= HERO ================= */
 
-.hero {
-    min-height: 650px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 50px 20px;
-
-    background:
-        linear-gradient(
-            rgba(79,65,54,0.18),
-            rgba(79,65,54,0.18)
-        ),
-        var(--terra);
+.hero{
+  max-width:1250px;
+  margin:30px auto 0;
+  padding:0 20px;
 }
 
-.hero-content {
-    max-width: 900px;
-
-    background: rgba(245,239,225,0.94);
-
-    padding: 55px;
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 15px 45px rgba(79,65,54,0.18);
+.hero-box{
+  min-height:570px;
+  border-radius:35px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:70px;
+  background:
+    linear-gradient(90deg,rgba(79,65,54,.88),rgba(79,65,54,.35)),
+    url("logo.jpg") center/cover no-repeat;
 }
 
-.hero h1 {
-    font-size: 58px;
-    margin-bottom: 10px;
+/* إلى حين تضيفي صورة Hero حقيقية، logo.jpg غادي يكون الخلفية */
+
+.hero-content{
+  max-width:600px;
+  color:white;
+  text-align:right;
 }
 
-.hero h2 {
-    color: var(--olive);
-    font-size: 28px;
-    margin-bottom: 20px;
+.hero-small{
+  display:inline-block;
+  background:var(--honey);
+  color:var(--brown);
+  padding:7px 16px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:20px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.hero h1{
+  font-size:clamp(42px,6vw,75px);
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-.hero-button {
-    display: inline-block;
-
-    background: var(--olive);
-    color: white;
-
-    padding: 14px 32px;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-    font-weight: bold;
+.hero p{
+  font-size:20px;
+  max-width:550px;
+  margin-bottom:30px;
 }
 
-
-/* ================= GENERAL ================= */
-
-.section {
-    max-width: 1250px;
-    margin: auto;
-
-    padding: 90px 25px;
+.hero-btn{
+  display:inline-block;
+  background:var(--honey);
+  color:var(--brown);
+  padding:15px 30px;
+  border-radius:35px;
+  font-size:18px;
+  font-weight:bold;
+  transition:.25s;
 }
 
-.section-title {
-    text-align: center;
-
-    font-size: 40px;
-
-    margin-bottom: 55px;
+.hero-btn:hover{
+  transform:translateY(-3px);
 }
 
+/* ================= SECTION ================= */
 
-/* ================= ABOUT ================= */
-
-.about-box {
-    background: white;
-
-    padding: 45px;
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 10px 35px rgba(79,65,54,0.08);
-
-    font-size: 18px;
+.section{
+  max-width:1250px;
+  margin:100px auto;
+  padding:0 25px;
 }
 
-.about-box strong {
-    color: var(--olive);
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
 }
 
+.section-title span{
+  color:var(--olive);
+  font-weight:bold;
+}
+
+.section-title h2{
+  font-size:42px;
+  margin-top:5px;
+}
+
+.section-title p{
+  max-width:650px;
+  margin:10px auto;
+  opacity:.8;
+}
 
 /* ================= PRODUCTS ================= */
 
-.products-container {
-    display: flex;
-    flex-direction: column;
-
-    gap: 60px;
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
 }
 
-
-/*
-   كل منتج كبير
-*/
-
-.product {
-    min-height: 560px;
-
-    background: white;
-
-    border-radius: 30px;
-
-    overflow: hidden;
-
-    display: flex;
-
-    box-shadow:
-        0 12px 40px rgba(79,65,54,0.12);
+.product-card{
+  background:var(--white);
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(79,65,54,.10);
+  box-shadow:0 15px 40px rgba(79,65,54,.08);
+  transition:.3s;
 }
 
-.product.reverse {
-    flex-direction: row-reverse;
+.product-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(79,65,54,.14);
 }
 
-
-/* IMAGE */
-
-.product-image {
-    width: 50%;
-    min-height: 560px;
-
-    background: var(--cream);
-
-    padding: 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.product-image{
+  height:350px;
+  background:#eee7d8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+  position:relative;
 }
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-
-    max-height: 500px;
-
-    object-fit: contain;
-
-    display: block;
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition:.3s;
 }
 
-
-/* INFO */
-
-.product-info {
-    width: 50%;
-
-    padding: 55px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    text-align: right;
+.product-card:hover .product-image img{
+  transform:scale(1.04);
 }
 
-.product-info h3 {
-    font-size: 38px;
-
-    margin-bottom: 20px;
-
-    color: var(--brown);
+.natural-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:var(--olive);
+  color:white;
+  padding:6px 13px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
 }
 
-.product-description {
-    font-size: 18px;
-
-    margin-bottom: 25px;
+.product-info{
+  padding:25px;
 }
 
-.specifications {
-    background: var(--cream);
-
-    padding: 20px 25px;
-
-    border-radius: 18px;
-
-    margin-bottom: 25px;
+.product-info h3{
+  font-size:24px;
+  margin-bottom:8px;
 }
 
-.specifications h4 {
-    font-size: 20px;
-
-    margin-bottom: 10px;
-
-    color: var(--olive);
+.product-description{
+  min-height:72px;
+  opacity:.78;
+  font-size:15px;
 }
 
-.specifications ul {
-    padding-right: 22px;
+.product-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:20px 0;
 }
 
-.specifications li {
-    margin-bottom: 5px;
+.price{
+  font-size:25px;
+  font-weight:bold;
+  color:var(--brown);
 }
 
-.price {
-    width: fit-content;
-
-    background: var(--honey);
-
-    padding: 9px 22px;
-
-    border-radius: 30px;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    margin-bottom: 22px;
+.weight{
+  background:var(--cream);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
 }
 
-.product-buttons {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
+.product-btn{
+  width:100%;
+  border:0;
+  padding:14px;
+  border-radius:15px;
+  background:var(--brown);
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  transition:.25s;
 }
 
-.add-cart {
-    border: none;
-
-    background: var(--olive);
-    color: white;
-
-    padding: 13px 22px;
-
-    border-radius: 28px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-    font-size: 15px;
+.product-btn:hover{
+  background:var(--olive);
 }
 
-.add-cart:hover {
-    background: var(--brown);
+/* ================= ABOUT ================= */
+
+.about-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
 }
 
-.whatsapp-product {
-    background: var(--honey);
-
-    color: var(--brown);
-
-    text-decoration: none;
-
-    padding: 13px 22px;
-
-    border-radius: 28px;
-
-    font-weight: bold;
+.about-visual{
+  min-height:430px;
+  border-radius:30px;
+  background:
+    linear-gradient(rgba(126,147,115,.25),rgba(212,168,124,.25)),
+    var(--terra);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
 }
 
+.about-visual img{
+  max-width:75%;
+  max-height:350px;
+  object-fit:contain;
+  border-radius:20px;
+}
+
+.about-text h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  font-size:17px;
+  line-height:2;
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+  background:var(--olive);
+  color:white;
+  border-radius:35px;
+  padding:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.benefit{
+  text-align:center;
+  padding:15px;
+}
+
+.benefit-icon{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:var(--honey);
+  color:var(--brown);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin:0 auto 15px;
+}
+
+.benefit h3{
+  margin-bottom:7px;
+}
 
 /* ================= PACKAGES ================= */
 
-.packages {
-    background: var(--terra);
-
-    padding: 90px 25px;
+.packages{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.packages-box {
-    max-width: 1000px;
-    margin: auto;
+.package{
+  background:var(--white);
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  border:1px solid rgba(79,65,54,.1);
 }
 
-.coming-soon {
-    background: var(--cream);
-
-    padding: 45px;
-
-    border-radius: 25px;
-
-    text-align: center;
-
-    font-size: 20px;
+.package-icon{
+  font-size:50px;
+  margin-bottom:15px;
 }
 
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp-fixed {
-    position: fixed;
-
-    left: 20px;
-    bottom: 20px;
-
-    width: 62px;
-    height: 62px;
-
-    background: #25D366;
-
-    color: white;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    font-size: 28px;
-
-    z-index: 2500;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,0.2);
+.package h3{
+  font-size:23px;
+  margin-bottom:10px;
 }
 
+.coming{
+  display:inline-block;
+  background:var(--honey);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+}
 
 /* ================= FOOTER ================= */
 
-footer {
-    background: var(--brown);
-
-    color: var(--cream);
-
-    text-align: center;
-
-    padding: 40px 20px;
+footer{
+  background:var(--brown);
+  color:white;
+  margin-top:100px;
+  padding:55px 25px 30px;
 }
 
+.footer-content{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.footer-logo img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+  border-radius:50%;
+}
+
+footer h3{
+  margin-bottom:15px;
+}
+
+footer a{
+  display:block;
+  margin-bottom:8px;
+  opacity:.85;
+}
+
+.copyright{
+  max-width:1200px;
+  margin:40px auto 0;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.15);
+  text-align:center;
+  opacity:.7;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  left:25px;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  z-index:1500;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
 
 /* ================= CART ================= */
 
-.cart-overlay {
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 3000;
-
-    background: rgba(0,0,0,0.45);
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  z-index:2000;
+  display:none;
 }
 
-.cart-panel {
-    position: absolute;
-
-    right: 0;
-    top: 0;
-
-    width: min(470px,100%);
-
-    height: 100%;
-
-    background: var(--cream);
-
-    padding: 25px;
-
-    overflow-y: auto;
+.cart-overlay.active{
+  display:block;
 }
 
-.cart-header {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 25px;
+.cart-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  width:min(450px,100%);
+  background:var(--white);
+  padding:25px;
+  overflow:auto;
 }
 
-.close-cart {
-    width: 38px;
-    height: 38px;
-
-    border: none;
-
-    background: var(--brown);
-
-    color: white;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    font-size: 20px;
+.cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+  padding-bottom:15px;
+  margin-bottom:20px;
 }
 
-.cart-item {
-    background: white;
-
-    border-radius: 18px;
-
-    padding: 18px;
-
-    margin-bottom: 12px;
+.close{
+  border:0;
+  background:none;
+  font-size:28px;
+  color:var(--brown);
 }
 
-.cart-item-name {
-    font-weight: bold;
-
-    font-size: 18px;
+.cart-item{
+  padding:15px 0;
+  border-bottom:1px solid #ddd;
 }
 
-.cart-item-price {
-    color: var(--olive);
-
-    font-weight: bold;
+.cart-item-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
 }
 
-.quantity-controls {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-top: 12px;
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
 }
 
-.quantity-controls button {
-    width: 32px;
-    height: 32px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: var(--olive);
-
-    color: white;
-
-    cursor: pointer;
-
-    font-weight: bold;
+.quantity button{
+  width:30px;
+  height:30px;
+  border:0;
+  border-radius:50%;
+  background:var(--olive);
+  color:white;
 }
 
-.remove-item {
-    background: #B85C5C !important;
+.cart-total{
+  margin-top:25px;
+  font-size:23px;
+  font-weight:bold;
+  display:flex;
+  justify-content:space-between;
 }
 
-.cart-total {
-    background: var(--honey);
-
-    padding: 20px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    margin-top: 25px;
+.checkout-btn{
+  width:100%;
+  margin-top:20px;
+  padding:15px;
+  border:0;
+  border-radius:15px;
+  background:var(--honey);
+  color:var(--brown);
+  font-size:17px;
+  font-weight:bold;
 }
-
-.checkout-button {
-    width: 100%;
-
-    margin-top: 15px;
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 30px;
-
-    background: var(--olive);
-
-    color: white;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-    font-size: 17px;
-}
-
 
 /* ================= CHECKOUT ================= */
 
-.checkout-section {
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 4000;
-
-    background: var(--cream);
-
-    overflow-y: auto;
-
-    padding: 40px 20px;
+.checkout{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:rgba(0,0,0,.5);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
-.checkout-container {
-    max-width: 650px;
-
-    margin: auto;
-
-    background: white;
-
-    padding: 40px;
-
-    border-radius: 28px;
+.checkout.active{
+  display:flex;
 }
 
-.checkout-container h2 {
-    text-align: center;
-
-    margin-bottom: 30px;
+.checkout-box{
+  width:min(600px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:var(--white);
+  border-radius:25px;
+  padding:30px;
 }
 
-.form-group {
-    margin-bottom: 18px;
+.checkout-box h2{
+  margin-bottom:20px;
 }
 
-.form-group label {
-    display: block;
+.form-group{
+  margin-bottom:15px;
+}
 
-    font-weight: bold;
-
-    margin-bottom: 7px;
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:bold;
 }
 
 .form-group input,
-.form-group textarea {
-    width: 100%;
-
-    padding: 13px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 12px;
-
-    font-family: inherit;
-
-    font-size: 15px;
+.form-group textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-family:inherit;
 }
 
-.form-group textarea {
-    min-height: 100px;
-
-    resize: vertical;
+.form-group textarea{
+  min-height:90px;
+  resize:vertical;
 }
 
-.confirm-button {
-    width: 100%;
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 30px;
-
-    background: #25D366;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-    font-size: 17px;
+.confirm-btn{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:15px;
+  background:#25D366;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
 }
-
-.back-button {
-    width: 100%;
-
-    margin-top: 10px;
-
-    padding: 13px;
-
-    border: none;
-
-    border-radius: 30px;
-
-    background: var(--brown);
-
-    color: white;
-
-    cursor: pointer;
-}
-
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 850px) {
+@media(max-width:900px){
 
-    .header-container {
-        flex-direction: column;
-    }
+  .nav-links{
+    display:none;
+  }
 
-    nav {
-        justify-content: center;
-    }
+  .products-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .hero {
-        min-height: 520px;
-    }
+  .benefits{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .hero-content {
-        padding: 35px 20px;
-    }
+  .about-box{
+    grid-template-columns:1fr;
+  }
 
-    .hero h1 {
-        font-size: 42px;
-    }
+  .packages{
+    grid-template-columns:1fr;
+  }
 
-    .hero h2 {
-        font-size: 23px;
-    }
-
-    .product,
-    .product.reverse {
-        flex-direction: column;
-    }
-
-    .product-image,
-    .product-info {
-        width: 100%;
-    }
-
-    .product-image {
-        min-height: 430px;
-        padding: 25px;
-    }
-
-    .product-image img {
-        max-height: 390px;
-    }
-
-    .product-info {
-        min-height: auto;
-        padding: 35px 25px;
-    }
-
-    .product-info h3 {
-        font-size: 30px;
-    }
-
-    .product-description {
-        font-size: 17px;
-    }
-
+  .footer-content{
+    grid-template-columns:1fr;
+  }
 }
 
+@media(max-width:600px){
 
-/* ================= SMALL MOBILE ================= */
+  .navbar{
+    padding:10px 15px;
+  }
 
-@media (max-width: 500px) {
+  .logo span{
+    display:none;
+  }
 
-    .section {
-        padding: 60px 15px;
-    }
+  .logo img{
+    width:50px;
+    height:50px;
+  }
 
-    .section-title {
-        font-size: 30px;
-    }
+  .hero{
+    margin-top:15px;
+    padding:0 12px;
+  }
 
-    .product-image {
-        min-height: 350px;
-    }
+  .hero-box{
+    min-height:550px;
+    padding:35px 25px;
+    border-radius:25px;
+  }
 
-    .product-image img {
-        max-height: 320px;
-    }
+  .hero h1{
+    font-size:43px;
+  }
 
-    .product-info {
-        padding: 28px 20px;
-    }
+  .hero p{
+    font-size:16px;
+  }
 
-    .product-info h3 {
-        font-size: 27px;
-    }
+  .section{
+    margin:70px auto;
+    padding:0 15px;
+  }
 
-    .product-buttons {
-        flex-direction: column;
-    }
+  .section-title h2{
+    font-size:32px;
+  }
 
-    .add-cart,
-    .whatsapp-product {
-        width: 100%;
-        text-align: center;
-    }
+  .products-grid{
+    grid-template-columns:1fr;
+  }
 
+  .product-image{
+    height:370px;
+  }
+
+  .about-text h2{
+    font-size:32px;
+  }
+
+  .benefits{
+    grid-template-columns:1fr 1fr;
+    padding:25px 12px;
+  }
+
+  .benefit h3{
+    font-size:16px;
+  }
+
+  .benefit p{
+    font-size:13px;
+  }
+
+  .whatsapp{
+    width:55px;
+    height:55px;
+    bottom:18px;
+    left:18px;
+  }
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
+  <div class="navbar">
 
-<div class="header-container">
+    <a href="#" class="logo">
+      <img src="logo.jpg" alt="Imidar Bio">
+      <span>Imidar Bio</span>
+    </a>
 
-<img
-src="logo.jpg"
-alt="Imidar Bio"
-class="logo"
->
+    <nav class="nav-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">من نحن</a>
+      <a href="#packages">الباقات</a>
+    </nav>
 
-<nav>
+    <div class="nav-actions">
+      <button class="lang-btn">FR</button>
 
-<a href="#home">
-الرئيسية
-</a>
+      <button class="cart-btn" onclick="openCart()">
+        🛒 السلة
+        <span id="cartCount">0</span>
+      </button>
+    </div>
 
-<a href="#about">
-من نحن
-</a>
-
-<a href="#products">
-منتجاتنا
-</a>
-
-<a href="#packages">
-الباقات
-</a>
-
-<button
-class="cart-button"
-onclick="openCart()"
->
-🛒 السلة
-<span id="cartCount">0</span>
-</button>
-
-</nav>
-
-</div>
-
+  </div>
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
-<section
-class="hero"
-id="home"
->
+<section class="hero" id="home">
 
-<div class="hero-content">
+  <div class="hero-box">
 
-<h1>
-إيميدار بيو
-</h1>
+    <div class="hero-content">
 
-<h2>
-خيرات طبيعية من المغرب
-</h2>
+      <span class="hero-small">
+        🌿 منتجات طبيعية مغربية
+      </span>
 
-<p>
-منتجات طبيعية مختارة بعناية،
-تجمع بين الأصالة والجودة والطبيعة.
-</p>
+      <h1>
+        خيرات المغرب...
+        <br>
+        بنقاء وأصالة
+      </h1>
 
-<a
-href="#products"
-class="hero-button"
->
-اكتشفي منتجاتنا
-</a>
+      <p>
+        نختار لكم أجود المنتجات الطبيعية المغربية،
+        بعناية وجودة تليق بكم.
+      </p>
 
-</div>
+      <a href="#products" class="hero-btn">
+        اكتشف منتجاتنا
+      </a>
 
-</section>
+    </div>
 
-
-<!-- ================= ABOUT ================= -->
-
-<section
-class="section"
-id="about"
->
-
-<h2 class="section-title">
-من نحن
-</h2>
-
-<div class="about-box">
-
-<p>
-بدأت رحلة <strong>إيميدار بيو</strong> من شغف عميق بالأصالة والبحث عن الجودة النظيفة في زمن كثرت فيه المنتجات المصنعة؛ إذ نؤمن بأن الطبيعة المغربية تجود بأفضل ما لديها، وأن المنتجات الطبيعية النقية ليست مجرد غذاء بل أسلوب حياة وصحة وبركة تتوارثها الأجيال.
-</p>
-
-<br>
-
-<p>
-نبع اسم "إيميدار" من الهوية والتراب ليعكس جذورنا الأمازيغية الضاربة في القدم، واخترنا أن نقدم لكم خيرات بلادنا بأسلوب محترف وفاخر يجمع بين الانتقاء الدقيق لأجود المكونات الطبيعية من مصادرها الأصيلة، العناية الفائقة بالتفاصيل والتغليف، والتوازن المثالي بين القيمة الغذائية العالية والتصميم العصري، لتكون <strong>إيميدار بيو</strong> عهداً صادقاً بالشفافية والبركة في كل منتج يصل إلى بيتكم.
-</p>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= PRODUCTS ================= -->
+<!-- PRODUCTS -->
 
-<section
-class="section"
-id="products"
->
+<section class="section" id="products">
 
-<h2 class="section-title">
-منتجاتنا
-</h2>
+  <div class="section-title">
+    <span>IMIDAR BIO</span>
+    <h2>منتجاتنا</h2>
+    <p>
+      منتجات طبيعية مختارة بعناية من أجود المكونات.
+    </p>
+  </div>
 
+  <div class="products-grid">
 
-<div class="products-container">
 
+    <!-- PRODUCT 1 -->
 
-<!-- PRODUCT 1 -->
+    <article class="product-card">
 
-<div class="product">
+      <div class="product-image">
 
-<div class="product-image">
+        <span class="natural-badge">
+          طبيعي 100%
+        </span>
 
-<img
-src="amlou amande.jpg"
-alt="أملو تقليدي أصيل"
->
+        <img src="amlou amande.jpg"
+             alt="أملو تقليدي أصيل">
 
-</div>
+      </div>
 
+      <div class="product-info">
 
-<div class="product-info">
+        <h3>أملو تقليدي أصيل</h3>
 
-<h3>
-أملو تقليدي أصيل
-</h3>
+        <p class="product-description">
+          أملو تقليدي مصنوع من اللوز المحمص،
+          زيت أركان الحر والعسل الطبيعي.
+        </p>
 
-<p class="product-description">
-أملو تقليدي أصيل مصنوع بالطريقة التقليدية 100%.
-نستخدم لوزاً محمصاً بعناية فائقة، زيت أركان حر نقي،
-وعسلاً حراً طبيعياً. غني بالطاقة ومذاق لا يُقاوم،
-مثالي لفطور صحي ولذيذ.
-</p>
+        <div class="product-meta">
+          <span class="price">80 DH</span>
+          <span class="weight">250 غ</span>
+        </div>
 
+        <button class="product-btn"
+                onclick="addToCart('أملو تقليدي أصيل',80)">
+          🛒 Ajouter au panier
+        </button>
 
-<div class="specifications">
+      </div>
 
-<h4>
-المواصفات
-</h4>
+    </article>
 
-<ul>
 
-<li>
-الوزن الصافي: 250 غ
-</li>
+    <!-- PRODUCT 2 -->
 
-<li>
-المكونات: لوز، عسل حر، زيت أركان
-</li>
+    <article class="product-card">
 
-<li>
-منتج طبيعي عالي الجودة للصحة والحيوية
-</li>
+      <div class="product-image">
 
-</ul>
+        <span class="natural-badge">
+          اختيار مميز
+        </span>
 
-</div>
+        <img src="amlou chocolat.jpg"
+             alt="أملو بالشكلاط">
 
+      </div>
 
-<div class="price">
-80 DH
-</div>
+      <div class="product-info">
 
+        <h3>أملو بالشكلاط</h3>
 
-<div class="product-buttons">
+        <p class="product-description">
+          تجربة تجمع بين اللوز الطبيعي
+          والمذاق الغني للشوكولاتة.
+        </p>
 
-<button
-class="add-cart"
-onclick="addToCart('أملو تقليدي أصيل')"
->
-🛒 أضف إلى السلة
-</button>
+        <div class="product-meta">
+          <span class="price">85 DH</span>
+          <span class="weight">250 غ</span>
+        </div>
 
-<a
-class="whatsapp-product"
-target="_blank"
-href="https://wa.me/212656562146?text=السلام عليكم، أريد طلب أملو تقليدي أصيل"
->
-WhatsApp
-</a>
+        <button class="product-btn"
+                onclick="addToCart('أملو بالشكلاط',85)">
+          🛒 Ajouter au panier
+        </button>
 
-</div>
+      </div>
 
-</div>
+    </article>
 
-</div>
 
+    <!-- PRODUCT 3 -->
 
-<!-- PRODUCT 2 -->
+    <article class="product-card">
 
-<div class="product reverse">
+      <div class="product-image">
 
-<div class="product-image">
+        <span class="natural-badge">
+          صحي
+        </span>
 
-<img
-src="amlou chocolat.jpg"
-alt="أملو بالشكلاط"
->
+        <img src="amlou graain.jpg"
+             alt="أملو بذور اليقطين">
 
-</div>
+      </div>
 
+      <div class="product-info">
 
-<div class="product-info">
+        <h3>أملو بذور اليقطين</h3>
 
-<h3>
-أملو بالشكلاط
-</h3>
+        <p class="product-description">
+          وصفة مميزة من بذور اليقطين
+          والعسل وزيت الأركان.
+        </p>
 
-<p class="product-description">
-تجربة فريدة ومميزة تجمع بين المذاق الغني للشوكولاتة
-الفاخرة واللوز الطبيعي. غني بالفيتامينات والمغذيات
-التي تمنحك طاقة متجددة طوال اليوم.
-</p>
+        <div class="product-meta">
+          <span class="price">75 DH</span>
+          <span class="weight">250 غ</span>
+        </div>
 
+        <button class="product-btn"
+                onclick="addToCart('أملو بذور اليقطين',75)">
+          🛒 Ajouter au panier
+        </button>
 
-<div class="specifications">
+      </div>
 
-<h4>
-المواصفات
-</h4>
+    </article>
 
-<ul>
 
-<li>
-الوزن الصافي: 250 غ
-</li>
+    <!-- PRODUCT 4 -->
 
-<li>
-المكونات: لوز، شوكولاتة عالية الجودة، عسل حر، زيت أركان
-</li>
+    <article class="product-card">
 
-<li>
-محبوب جداً من طرف الأطفال وعشاق الشوكولاتة
-</li>
+      <div class="product-image">
 
-</ul>
+        <span class="natural-badge">
+          طبيعي
+        </span>
 
-</div>
+        <img src="miel orange.jpg"
+             alt="عسل الليمون">
 
+      </div>
 
-<div class="price">
-85 DH
-</div>
+      <div class="product-info">
 
+        <h3>عسل الليمون</h3>
 
-<div class="product-buttons">
+        <p class="product-description">
+          عسل طبيعي 100% بمذاق نقي ومنعش،
+          مناسب للاستعمال اليومي.
+        </p>
 
-<button
-class="add-cart"
-onclick="addToCart('أملو بالشكلاط')"
->
-🛒 أضف إلى السلة
-</button>
+        <div class="product-meta">
+          <span class="price">70 DH</span>
+          <span class="weight">250 غ</span>
+        </div>
 
-<a
-class="whatsapp-product"
-target="_blank"
-href="https://wa.me/212656562146?text=السلام عليكم، أريد طلب أملو بالشكلاط"
->
-WhatsApp
-</a>
+        <button class="product-btn"
+                onclick="addToCart('عسل الليمون',70)">
+          🛒 Ajouter au panier
+        </button>
 
-</div>
+      </div>
 
-</div>
+    </article>
 
-</div>
-
-
-<!-- PRODUCT 3 -->
-
-<div class="product">
-
-<div class="product-image">
-
-<img
-src="amlou graain.jpg"
-alt="أملو بذور اليقطين"
->
-
-</div>
-
-
-<div class="product-info">
-
-<h3>
-أملو بذور اليقطين
-</h3>
-
-<p class="product-description">
-وصفة صحية استثنائية! أملو مصنوع من بذور اليقطين
-الغنية بأوميغا 3 والبروتينات. الخيار المثالي لكل من
-يرغب في الحفاظ على صحته واتباع نظام غذائي متوازن
-وغني بالفوائد.
-</p>
-
-
-<div class="specifications">
-
-<h4>
-المواصفات
-</h4>
-
-<ul>
-
-<li>
-الوزن الصافي: 250 غ
-</li>
-
-<li>
-المكونات: بذور اليقطين، عسل حر، زيت أركان
-</li>
-
-<li>
-قيمة غذائية عالية لدعم الصحة العامة
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="price">
-75 DH
-</div>
-
-
-<div class="product-buttons">
-
-<button
-class="add-cart"
-onclick="addToCart('أملو بذور اليقطين')"
->
-🛒 أضف إلى السلة
-</button>
-
-<a
-class="whatsapp-product"
-target="_blank"
-href="https://wa.me/212656562146?text=السلام عليكم، أريد طلب أملو بذور اليقطين"
->
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product reverse">
-
-<div class="product-image">
-
-<img
-src="miel orange.jpg"
-alt="عسل الليمون"
->
-
-</div>
-
-
-<div class="product-info">
-
-<h3>
-عسل الليمون
-</h3>
-
-<p class="product-description">
-عسل ليمون طبيعي 100%، يتميز بمذاق منعش ونقي.
-مفيد لصحة الجهاز التنفسي ويدعم المناعة بشكل طبيعي.
-خيار رائع لتحلية صحية أو للاستخدام اليومي.
-</p>
-
-
-<div class="specifications">
-
-<h4>
-المواصفات
-</h4>
-
-<ul>
-
-<li>
-الوزن الصافي: 250 غ
-</li>
-
-<li>
-المكونات: عسل حر طبيعي 100%
-</li>
-
-<li>
-منتج طبيعي أصلي يجمع بين اللذة والفائدة
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="price">
-70 DH
-</div>
-
-
-<div class="product-buttons">
-
-<button
-class="add-cart"
-onclick="addToCart('عسل الليمون')"
->
-🛒 أضف إلى السلة
-</button>
-
-<a
-class="whatsapp-product"
-target="_blank"
-href="https://wa.me/212656562146?text=السلام عليكم، أريد طلب عسل الليمون"
->
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= PACKAGES ================= -->
+<!-- WHY IMIDAR -->
 
-<section
-class="packages"
-id="packages"
->
+<section class="section">
 
-<div class="packages-box">
+  <div class="benefits">
 
-<h2 class="section-title">
-الباقات
-</h2>
+    <div class="benefit">
+      <div class="benefit-icon">🌿</div>
+      <h3>طبيعي</h3>
+      <p>منتجات مختارة بعناية</p>
+    </div>
 
-<div class="coming-soon">
+    <div class="benefit">
+      <div class="benefit-icon">🇲🇦</div>
+      <h3>مغربي أصيل</h3>
+      <p>من خيرات بلادنا</p>
+    </div>
 
-<p>
-🌿 قريباً سنقدم لكم باقات مميزة تجمع منتجات
-إيميدار بيو بطريقة جميلة ومناسبة للهدايا والمناسبات.
-</p>
+    <div class="benefit">
+      <div class="benefit-icon">🍯</div>
+      <h3>جودة</h3>
+      <p>مكونات منتقاة</p>
+    </div>
 
-</div>
+    <div class="benefit">
+      <div class="benefit-icon">📦</div>
+      <h3>تغليف أنيق</h3>
+      <p>عناية في كل التفاصيل</p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <div class="about-box">
+
+    <div class="about-visual">
+
+      <img src="logo.jpg" alt="Imidar Bio">
+
+    </div>
+
+    <div class="about-text">
+
+      <span>من نحن</span>
+
+      <h2>قصة إيميدار بيو</h2>
+
+      <p>
+        بدأت رحلة <strong>إيميدار بيو</strong> من شغف عميق
+        بالأصالة والبحث عن الجودة النظيفة في زمن كثرت فيه
+        المنتجات المصنعة؛ إذ نؤمن بأن الطبيعة المغربية تجود
+        بأفضل ما لديها، وأن المنتجات الطبيعية النقية ليست مجرد
+        غذاء بل أسلوب حياة وصحة وبركة تتوارثها الأجيال.
+      </p>
+
+      <p>
+        نبع اسم "إيميدار" من الهوية والتراب ليعكس جذورنا
+        الأمازيغية الضاربة في القدم، واخترنا أن نقدم لكم
+        خيرات بلادنا بأسلوب محترف وفاخر يجمع بين الانتقاء
+        الدقيق لأجود المكونات الطبيعية والعناية الفائقة
+        بالتفاصيل والتغليف.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PACKAGES -->
+
+<section class="section" id="packages">
+
+  <div class="section-title">
+
+    <span>IMIDAR BIO</span>
+
+    <h2>الباقات</h2>
+
+    <p>
+      باقات مختارة بعناية ستكون متوفرة قريباً.
+    </p>
+
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <div class="package-icon">🍯</div>
+      <h3>باقة الفطور</h3>
+      <p>اختيارات طبيعية لفطور لذيذ.</p>
+      <br>
+      <span class="coming">قريباً</span>
+    </div>
+
+    <div class="package">
+      <div class="package-icon">🌿</div>
+      <h3>باقة الطبيعة</h3>
+      <p>مجموعة من منتجاتنا الطبيعية.</p>
+      <br>
+      <span class="coming">قريباً</span>
+    </div>
+
+    <div class="package">
+      <div class="package-icon">🎁</div>
+      <h3>باقة هدية</h3>
+      <p>هدية أنيقة من خيرات المغرب.</p>
+      <br>
+      <span class="coming">قريباً</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-<p>
-© 2026 Imidar Bio - إيميدار بيو
-</p>
+  <div class="footer-content">
 
-<p>
-خيرات طبيعية من المغرب 🇲🇦
-</p>
+    <div>
+
+      <div class="footer-logo">
+        <img src="logo.jpg" alt="Imidar Bio">
+        <span>Imidar Bio</span>
+      </div>
+
+      <p>
+        خيرات المغرب بنقاء وأصالة.
+      </p>
+
+    </div>
+
+    <div>
+
+      <h3>روابط</h3>
+
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">من نحن</a>
+      <a href="#packages">الباقات</a>
+
+    </div>
+
+    <div>
+
+      <h3>تواصل معنا</h3>
+
+      <a href="https://wa.me/212656562146" target="_blank">
+        WhatsApp
+      </a>
+
+      <a href="tel:0656562146">
+        0656562146
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Imidar Bio — جميع الحقوق محفوظة
+  </div>
 
 </footer>
 
 
-<!-- ================= WHATSAPP ================= -->
+<!-- WHATSAPP -->
 
-<a
-href="https://wa.me/212656562146"
-target="_blank"
-class="whatsapp-fixed"
-aria-label="WhatsApp"
->
-☎
+<a class="whatsapp"
+   href="https://wa.me/212656562146"
+   target="_blank"
+   aria-label="WhatsApp">
+  ☎
 </a>
 
 
-<!-- ================= CART ================= -->
+<!-- CART -->
 
-<div
-class="cart-overlay"
-id="cartOverlay"
-onclick="closeCartOutside(event)"
->
+<div class="cart-overlay" id="cartOverlay">
 
-<div
-class="cart-panel"
-onclick="event.stopPropagation()"
->
+  <div class="cart-panel">
 
-<div class="cart-header">
+    <div class="cart-header">
 
-<h2>
-🛒 السلة
-</h2>
+      <h2>🛒 سلة المشتريات</h2>
 
-<button
-class="close-cart"
-onclick="closeCart()"
->
-×
-</button>
+      <button class="close"
+              onclick="closeCart()">
+        ×
+      </button>
 
-</div>
+    </div>
 
-<div id="cartItems"></div>
+    <div id="cartItems"></div>
 
-<div
-class="cart-total"
-id="cartTotal"
->
-المجموع: 0 DH
-</div>
+    <div class="cart-total">
+      <span>المجموع</span>
+      <span id="cartTotal">0 DH</span>
+    </div>
 
-<button
-class="checkout-button"
-onclick="goToCheckout()"
->
-متابعة الطلب
-</button>
+    <button class="checkout-btn"
+            onclick="openCheckout()">
+      متابعة الطلب
+    </button>
 
-</div>
+  </div>
 
 </div>
 
 
-<!-- ================= CHECKOUT ================= -->
+<!-- CHECKOUT -->
 
-<section
-class="checkout-section"
-id="checkoutSection"
->
+<div class="checkout" id="checkout">
 
-<div class="checkout-container">
+  <div class="checkout-box">
 
-<h2>
-تأكيد الطلب
-</h2>
+    <div class="cart-header">
 
-<form onsubmit="confirmOrder(event)">
+      <h2>تأكيد الطلب</h2>
 
+      <button class="close"
+              onclick="closeCheckout()">
+        ×
+      </button>
 
-<div class="form-group">
+    </div>
 
-<label>
-الاسم
-</label>
+    <div class="form-group">
+      <label>الاسم</label>
+      <input id="firstName" type="text" placeholder="الاسم">
+    </div>
 
-<input
-type="text"
-id="lastName"
-required
-placeholder="الاسم"
->
+    <div class="form-group">
+      <label>النسب</label>
+      <input id="lastName" type="text" placeholder="النسب">
+    </div>
 
-</div>
+    <div class="form-group">
+      <label>رقم الهاتف</label>
+      <input id="phone" type="tel" placeholder="06xxxxxxxx">
+    </div>
 
+    <div class="form-group">
+      <label>العنوان</label>
+      <input id="address" type="text" placeholder="العنوان">
+    </div>
 
-<div class="form-group">
+    <div class="form-group">
+      <label>ملاحظة</label>
+      <textarea id="note"
+                placeholder="ملاحظة اختيارية"></textarea>
+    </div>
 
-<label>
-النسب
-</label>
+    <button class="confirm-btn"
+            onclick="sendOrder()">
+      تأكيد الطلب عبر WhatsApp
+    </button>
 
-<input
-type="text"
-id="firstName"
-required
-placeholder="النسب"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-رقم الهاتف
-</label>
-
-<input
-type="tel"
-id="phone"
-required
-placeholder="06XXXXXXXX"
->
+  </div>
 
 </div>
-
-
-<div class="form-group">
-
-<label>
-العنوان
-</label>
-
-<textarea
-id="address"
-required
-placeholder="المدينة، الحي، العنوان..."
-></textarea>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-ملاحظة اختيارية
-</label>
-
-<textarea
-id="note"
-placeholder="أي ملاحظة إضافية..."
-></textarea>
-
-</div>
-
-
-<button
-type="submit"
-class="confirm-button"
->
-📱 تأكيد الطلب عبر WhatsApp
-</button>
-
-
-<button
-type="button"
-class="back-button"
-onclick="closeCheckout()"
->
-رجوع
-</button>
-
-
-</form>
-
-</div>
-
-</section>
 
 
 <script>
 
-
-/* ================= PRODUCTS + PRICES ================= */
-
-const products = {
-
-    "أملو تقليدي أصيل": 80,
-
-    "أملو بالشكلاط": 85,
-
-    "أملو بذور اليقطين": 75,
-
-    "عسل الليمون": 70
-
-};
-
-
 let cart = [];
 
 
-/* ================= ADD TO CART ================= */
+/* ADD TO CART */
 
-function addToCart(productName) {
+function addToCart(name, price){
 
-    const existing =
-        cart.find(
-            item => item.name === productName
-        );
+  const existing = cart.find(item => item.name === name);
 
+  if(existing){
+    existing.quantity++;
+  }else{
+    cart.push({
+      name:name,
+      price:price,
+      quantity:1
+    });
+  }
 
-    if (existing) {
+  updateCart();
 
-        existing.quantity++;
-
-    } else {
-
-        cart.push({
-
-            name: productName,
-
-            quantity: 1
-
-        });
-
-    }
-
-
-    updateCart();
-
-
-    alert(
-        "تمت إضافة " +
-        productName +
-        " إلى السلة 🛒"
-    );
-
+  alert("تمت إضافة المنتج إلى السلة 🛒");
 }
 
 
-/* ================= UPDATE CART ================= */
+/* UPDATE CART */
 
-function updateCart() {
+function updateCart(){
 
-    const cartItems =
-        document.getElementById(
-            "cartItems"
-        );
+  const container =
+    document.getElementById("cartItems");
 
+  const count =
+    document.getElementById("cartCount");
 
-    const cartCount =
-        document.getElementById(
-            "cartCount"
-        );
+  const totalElement =
+    document.getElementById("cartTotal");
 
+  container.innerHTML = "";
 
-    const cartTotal =
-        document.getElementById(
-            "cartTotal"
-        );
+  let total = 0;
+  let quantityTotal = 0;
 
+  cart.forEach((item,index)=>{
 
-    cartItems.innerHTML = "";
+    const subtotal =
+      item.price * item.quantity;
 
+    total += subtotal;
+    quantityTotal += item.quantity;
 
-    let totalQuantity = 0;
+    container.innerHTML += `
 
-    let totalPrice = 0;
+      <div class="cart-item">
 
+        <div class="cart-item-top">
 
-    if (cart.length === 0) {
+          <strong>
+            ${item.name}
+          </strong>
 
-        cartItems.innerHTML = `
+          <span>
+            ${subtotal} DH
+          </span>
 
-            <p style="text-align:center;padding:30px;">
+        </div>
 
-                السلة فارغة 🛒
+        <div class="quantity">
 
-            </p>
+          <button onclick="changeQuantity(${index},1)">
+            +
+          </button>
 
-        `;
+          <span>
+            ${item.quantity}
+          </span>
 
-    }
+          <button onclick="changeQuantity(${index},-1)">
+            −
+          </button>
 
+        </div>
 
-    cart.forEach(
-        (item,index) => {
+      </div>
 
-            const price =
-                products[item.name];
+    `;
 
+  });
 
-            const subtotal =
-                price * item.quantity;
-
-
-            totalQuantity +=
-                item.quantity;
-
-
-            totalPrice +=
-                subtotal;
-
-
-            const element =
-                document.createElement(
-                    "div"
-                );
-
-
-            element.className =
-                "cart-item";
-
-
-            element.innerHTML = `
-
-                <div class="cart-item-name">
-
-                    ${item.name}
-
-                </div>
-
-
-                <div class="cart-item-price">
-
-                    ${price} DH
-
-                </div>
-
-
-                <div>
-
-                    المجموع:
-                    <strong>
-                        ${subtotal} DH
-                    </strong>
-
-                </div>
-
-
-                <div class="quantity-controls">
-
-                    <button
-                    onclick="changeQuantity(${index},1)"
-                    >
-                        +
-                    </button>
-
-
-                    <span>
-                        ${item.quantity}
-                    </span>
-
-
-                    <button
-                    onclick="changeQuantity(${index},-1)"
-                    >
-                        -
-                    </button>
-
-
-                    <button
-                    class="remove-item"
-                    onclick="removeFromCart(${index})"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-            `;
-
-
-            cartItems.appendChild(
-                element
-            );
-
-        }
-    );
-
-
-    cartCount.textContent =
-        totalQuantity;
-
-
-    cartTotal.textContent =
-        "المجموع: " +
-        totalPrice +
-        " DH";
-
+  count.textContent = quantityTotal;
+  totalElement.textContent = total + " DH";
 }
 
 
-/* ================= QUANTITY ================= */
+/* CHANGE QUANTITY */
 
-function changeQuantity(index,change) {
+function changeQuantity(index,change){
 
-    cart[index].quantity += change;
+  cart[index].quantity += change;
 
-
-    if (
-        cart[index].quantity <= 0
-    ) {
-
-        cart.splice(index,1);
-
-    }
-
-
-    updateCart();
-
-}
-
-
-/* ================= REMOVE ================= */
-
-function removeFromCart(index) {
-
+  if(cart[index].quantity <= 0){
     cart.splice(index,1);
+  }
 
-    updateCart();
+  updateCart();
+}
+
+
+/* OPEN CART */
+
+function openCart(){
+
+  document
+    .getElementById("cartOverlay")
+    .classList.add("active");
 
 }
 
 
-/* ================= OPEN CART ================= */
+/* CLOSE CART */
 
-function openCart() {
+function closeCart(){
 
-    document.getElementById(
-        "cartOverlay"
-    ).style.display = "block";
-
-}
-
-
-/* ================= CLOSE CART ================= */
-
-function closeCart() {
-
-    document.getElementById(
-        "cartOverlay"
-    ).style.display = "none";
+  document
+    .getElementById("cartOverlay")
+    .classList.remove("active");
 
 }
 
 
-/* ================= OUTSIDE CART ================= */
+/* OPEN CHECKOUT */
 
-function closeCartOutside(event) {
+function openCheckout(){
 
-    if (
-        event.target.id ===
-        "cartOverlay"
-    ) {
+  if(cart.length === 0){
+    alert("السلة فارغة");
+    return;
+  }
 
-        closeCart();
+  closeCart();
 
-    }
-
-}
-
-
-/* ================= CHECKOUT ================= */
-
-function goToCheckout() {
-
-    if (cart.length === 0) {
-
-        alert(
-            "السلة فارغة، أضيفي منتجاً أولاً."
-        );
-
-        return;
-
-    }
-
-
-    closeCart();
-
-
-    document.getElementById(
-        "checkoutSection"
-    ).style.display = "block";
-
-
-    window.scrollTo(0,0);
+  document
+    .getElementById("checkout")
+    .classList.add("active");
 
 }
 
 
-/* ================= CLOSE CHECKOUT ================= */
+/* CLOSE CHECKOUT */
 
-function closeCheckout() {
+function closeCheckout(){
 
-    document.getElementById(
-        "checkoutSection"
-    ).style.display = "none";
+  document
+    .getElementById("checkout")
+    .classList.remove("active");
 
 }
 
 
-/* ================= WHATSAPP ORDER ================= */
+/* SEND ORDER */
 
-function confirmOrder(event) {
+function sendOrder(){
 
-    event.preventDefault();
+  const firstName =
+    document.getElementById("firstName").value.trim();
 
+  const lastName =
+    document.getElementById("lastName").value.trim();
 
-    if (cart.length === 0) {
+  const phone =
+    document.getElementById("phone").value.trim();
 
-        alert(
-            "السلة فارغة."
-        );
+  const address =
+    document.getElementById("address").value.trim();
 
-        return;
-
-    }
-
-
-    const lastName =
-        document.getElementById(
-            "lastName"
-        ).value;
+  const note =
+    document.getElementById("note").value.trim();
 
 
-    const firstName =
-        document.getElementById(
-            "firstName"
-        ).value;
+  if(!firstName ||
+     !lastName ||
+     !phone ||
+     !address){
+
+    alert("المرجو ملء المعلومات المطلوبة.");
+    return;
+
+  }
 
 
-    const phone =
-        document.getElementById(
-            "phone"
-        ).value;
+  let message =
+    "السلام عليكم، أريد تأكيد هذا الطلب من Imidar Bio:%0A%0A";
 
 
-    const address =
-        document.getElementById(
-            "address"
-        ).value;
+  let total = 0;
 
 
-    const note =
-        document.getElementById(
-            "note"
-        ).value;
+  cart.forEach(item => {
 
+    const subtotal =
+      item.price * item.quantity;
 
-    let total = 0;
-
-
-    let message =
-        "السلام عليكم، أريد تأكيد هذا الطلب من Imidar Bio 🌿%0A%0A";
-
+    total += subtotal;
 
     message +=
-        "👤 الاسم: " +
-        lastName +
-        " " +
-        firstName +
-        "%0A";
+      "• " +
+      item.name +
+      " × " +
+      item.quantity +
+      " = " +
+      subtotal +
+      " DH%0A";
+
+  });
 
 
-    message +=
-        "📞 الهاتف: " +
-        phone +
-        "%0A";
+  message +=
+    "%0Aالمجموع: " +
+    total +
+    " DH";
 
 
-    message +=
-        "📍 العنوان: " +
-        address +
-        "%0A%0A";
+  message +=
+    "%0A%0Aالاسم: " +
+    firstName +
+    " " +
+    lastName;
 
 
-    message +=
-        "🛒 المنتجات:%0A";
+  message +=
+    "%0Aالهاتف: " +
+    phone;
 
 
-    cart.forEach(
-        item => {
-
-            const price =
-                products[item.name];
+  message +=
+    "%0Aالعنوان: " +
+    address;
 
 
-            const subtotal =
-                price *
-                item.quantity;
-
-
-            total +=
-                subtotal;
-
-
-            message +=
-                "- " +
-                item.name +
-                " × " +
-                item.quantity +
-                " = " +
-                subtotal +
-                " DH%0A";
-
-        }
-    );
-
+  if(note){
 
     message +=
-        "%0A💰 المجموع: " +
-        total +
-        " DH%0A";
+      "%0Aملاحظة: " +
+      note;
+
+  }
 
 
-    if (
-        note.trim() !== ""
-    ) {
-
-        message +=
-            "📝 ملاحظة: " +
-            note;
-
-    }
+  const whatsapp =
+    "https://wa.me/212656562146?text=" +
+    message;
 
 
-    const url =
-        "https://wa.me/212656562146?text=" +
-        message;
-
-
-    window.open(
-        url,
-        "_blank"
-    );
+  window.open(
+    whatsapp,
+    "_blank"
+  );
 
 }
 
 
-/* ================= START ================= */
+/* INITIAL */
 
 updateCart();
 
 </script>
-
 
 </body>
 </html>
