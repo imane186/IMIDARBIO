@@ -1,206 +1,364 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imidar Bio | منتجات طبيعية</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f5ed;
-            color: #203126;
-        }
+<title>Imidar Bio | منتجات طبيعية</title>
 
-        header {
-            background: #2f6b45;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f6ef;
+    color: #263b2d;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
+header {
+    background: #2f6b45;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        .hero h1 {
-            color: #2f6b45;
-            font-size: 45px;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .hero p {
-            font-size: 20px;
-        }
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+}
 
-        .button {
-            display: inline-block;
-            background: #2f6b45;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin: 10px;
-        }
+.logo h2 {
+    margin: 0;
+}
 
-        .products {
-            padding: 50px 20px;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.hero {
+    min-height: 500px;
+    padding: 70px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        .card {
-            background: white;
-            width: 250px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px #00000015;
-        }
+.hero h1 {
+    font-size: 48px;
+    color: #2f6b45;
+    margin: 10px;
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            background: #e4e8df;
-        }
+.hero h2 {
+    font-size: 28px;
+}
 
-        footer {
-            background: #1f4d31;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-        }
-    </style>
+.hero p {
+    font-size: 19px;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+.button {
+    display: inline-block;
+    background: #2f6b45;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.section {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #2f6b45;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.about {
+    background: white;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 270px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #2f6b45;
+    font-size: 21px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.contact {
+    background: #e9efe6;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #00000030;
+    z-index: 10;
+}
+
+footer {
+    background: #1f4d31;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h2>🌿 IMIDAR BIO</h2>
+
+    <div class="logo">
+        <img src="logo.jpg" alt="Imidar Bio">
+        <h2>🌿 IMIDAR BIO</h2>
+    </div>
 
     <nav>
         <a href="#accueil">الرئيسية</a>
         <a href="#produits">المنتجات</a>
+        <a href="#apropos">من نحن</a>
         <a href="#contact">تواصل معنا</a>
     </nav>
+
 </header>
+
 
 <section class="hero" id="accueil">
 
-    <h1>IMIDAR BIO</h1>
+    <h1>IMIDAR BIO 🌿</h1>
 
-    <h2>الطبيعة بين يديك 🌿</h2>
+    <h2>الطبيعة بين يديك</h2>
 
     <p>
         مرحباً بكم في Imidar Bio.
-        منتجات طبيعية بجودة واهتمام.
+        منتجات طبيعية مختارة بعناية، بجودة واهتمام.
     </p>
 
-    <a class="button"
-       href="#produits">
-        اكتشف منتجاتنا
-    </a>
+    <div>
+        <a class="button" href="#produits">
+            اكتشف منتجاتنا
+        </a>
 
-    <a class="button"
-       href="https://wa.me/212656562146">
-        تواصل معنا عبر WhatsApp
-    </a>
+        <a class="button" href="https://wa.me/212656562146">
+            اطلب عبر WhatsApp
+        </a>
+    </div>
 
 </section>
 
-<section class="products" id="produits">
 
-    <h2>منتجاتنا</h2>
+<section class="section about" id="apropos">
 
-    <div class="cards">
+    <h2>من نحن 🌿</h2>
+
+    <p>
+        Imidar Bio هو مشروع يهتم بالمنتجات الطبيعية
+        والجودة، ونطمح دائماً إلى تقديم منتجات مميزة
+        لزبنائنا بطريقة بسيطة وموثوقة.
+    </p>
+
+</section>
+
+
+<section class="section" id="produits">
+
+    <h2>منتجاتنا 🛍️</h2>
+
+    <div class="products">
+
 
         <div class="card">
-            <img src="https://via.placeholder.com/300x200"
-                 alt="منتج Imidar Bio">
 
-            <h3>المنتج الأول</h3>
+            <img src="amlou amande.jpg" alt="أملو اللوز">
+
+            <h3>أملو اللوز</h3>
 
             <p>
-                وصف المنتج غادي نبدلوه من بعد
-                بالمعلومات والصورة الحقيقية.
+                أملو اللوز الطبيعي من Imidar Bio.
             </p>
 
             <a class="button"
-               href="https://wa.me/212656562146">
+               href="https://wa.me/212656562146?text=السلام%20عليكم،%20بغيت%20معلومات%20على%20أملو%20اللوز">
                 اطلب عبر WhatsApp
             </a>
+
         </div>
 
 
         <div class="card">
-            <img src="https://via.placeholder.com/300x200"
-                 alt="منتج Imidar Bio">
 
-            <h3>المنتج الثاني</h3>
+            <img src="amlou chocolat.jpg" alt="أملو الشوكولاتة">
+
+            <h3>أملو الشوكولاتة</h3>
 
             <p>
-                وصف المنتج غادي نضيفوه من بعد.
+                أملو بنكهة الشوكولاتة من Imidar Bio.
             </p>
 
             <a class="button"
-               href="https://wa.me/212656562146">
+               href="https://wa.me/212656562146?text=السلام%20عليكم،%20بغيت%20معلومات%20على%20أملو%20الشوكولاتة">
                 اطلب عبر WhatsApp
             </a>
+
         </div>
 
 
         <div class="card">
-            <img src="https://via.placeholder.com/300x200"
-                 alt="منتج Imidar Bio">
 
-            <h3>المنتج الثالث</h3>
+            <img src="amlou graain.jpg" alt="أملو الحبوب">
+
+            <h3>أملو الحبوب</h3>
 
             <p>
-                وصف المنتج غادي نضيفوه من بعد.
+                منتج طبيعي من Imidar Bio.
             </p>
 
             <a class="button"
-               href="https://wa.me/212656562146">
+               href="https://wa.me/212656562146?text=السلام%20عليكم،%20بغيت%20معلومات%20على%20أملو%20الحبوب">
                 اطلب عبر WhatsApp
             </a>
+
         </div>
+
+
+        <div class="card">
+
+            <img src="miel orange.jpg" alt="عسل البرتقال">
+
+            <h3>عسل البرتقال</h3>
+
+            <p>
+                عسل طبيعي بنكهة مميزة.
+            </p>
+
+            <a class="button"
+               href="https://wa.me/212656562146?text=السلام%20عليكم،%20بغيت%20معلومات%20على%20عسل%20البرتقال">
+                اطلب عبر WhatsApp
+            </a>
+
+        </div>
+
 
     </div>
 
 </section>
 
-<section class="products" id="contact">
 
-    <h2>تواصل معنا</h2>
+<section class="section contact" id="contact">
+
+    <h2>تواصل معنا 📱</h2>
 
     <p>
         للطلب أو الاستفسار، تواصل معنا عبر WhatsApp.
     </p>
 
-    <a class="button"
-       href="https://wa.me/212656562146">
-        WhatsApp
+    <a class="button" href="https://wa.me/212656562146">
+        💬 WhatsApp
     </a>
 
 </section>
 
+
+<a class="whatsapp"
+   href="https://wa.me/212656562146">
+    💬 WhatsApp
+</a>
+
+
 <footer>
+
     <p>© 2026 Imidar Bio - جميع الحقوق محفوظة</p>
+
 </footer>
 
 </body>
